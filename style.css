@@ -8,9 +8,10 @@
 html {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   background-color: rgba(225, 255, 229, 1);
+  font-size: 16px;
 }
 nav {
-  margin-top: 50px;
+  margin-top: 3rem;
 }
 
 body {
@@ -18,8 +19,9 @@ body {
 }
 
 main {
-  padding: 25px;
-  max-width: 700px;
+  padding: 3rem;
+  position: relative;
+  max-width: 75ch;
 }
 
 h1,
@@ -29,21 +31,25 @@ h4,
 h5 {
   font-family: "Courier New", Courier, monospace;
   text-transform: uppercase;
+  font-weight: 900;
 }
+
 a {
   color: black;
 }
 
 article {
-  padding-top: 20px;
-  padding-bottom: 25px;
+  padding-top: 1.2rem;
+  padding-bottom: 1.3rem;
 }
 article + article {
   border-top: solid;
 }
+
 li + li {
-  margin-top: 15px;
+  margin-top: 1rem;
 }
+
 .top-header {
   background: rgb(255, 255, 255);
   background: linear-gradient(
@@ -52,13 +58,14 @@ li + li {
     rgba(115, 140, 117, 0.7) 100%
   );
   text-align: center;
-  padding: 60px 16px;
+  padding: 3rem 1rem;
+  padding-top: 5rem;
 }
 
 .top-header a {
-  padding: 0.4em;
-  border: solid 1.5px;
-  border-radius: 0.8em;
+  padding: 0.4rem;
+  border: solid 0.11rem;
+  border-radius: 0.8rem;
   margin: 10px;
 }
 .top-header a:hover {
@@ -68,6 +75,42 @@ li + li {
   background-color: rgba(115, 140, 117, 0.7);
   color: white;
 }
+.top-heading {
+  font-size: 3rem;
+}
+.name {
+  font-size: 1em;
+}
+.position {
+  font-size: 0.25em;
+}
+
+.hire-me {
+  position: absolute;
+  right: 1rem;
+  top: 10px;
+  padding: 0.4rem;
+  border-radius: 0.8rem;
+  background-color: black;
+  color: rgba(225, 255, 229, 1);
+}
+
+.position::after {
+  content: "✨";
+}
+.article-heading {
+  position: relative;
+  left: -1rem;
+}
+.job-heading {
+  display: inline-block;
+  padding-right: 1rem;
+  border-right: solid;
+}
+.job-subheading {
+  display: inline-block;
+}
+
 #contact a:hover {
   color: rgb(78, 101, 86);
 }
@@ -75,6 +118,28 @@ li + li {
   background-color: rgba(115, 140, 117, 0.7);
   color: white;
 }
-.top-header p::after {
-  content: "✨";
+
+@media screen and (min-width: 786px) {
+  html {
+    font-size: 1.3em;
+  }
+  main > * + * {
+    margin-top: 5rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  html {
+    font-size: 1.5em;
+  }
+  .hire-me {
+    position: fixed;
+  }
+  main > * + * {
+    margin-top: 5rem;
+  }
+}
+@media print {
+  .hire-me {
+    display: none;
+  }
 }

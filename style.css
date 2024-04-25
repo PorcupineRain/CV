@@ -12,6 +12,8 @@ html {
 }
 nav {
   margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
 }
 
 body {
@@ -76,7 +78,7 @@ li + li {
   color: white;
 }
 .top-heading {
-  font-size: 3rem;
+  font-size: 4rem;
 }
 .name {
   font-size: 1em;
@@ -102,13 +104,9 @@ li + li {
   position: relative;
   left: -1rem;
 }
-.job-heading {
-  display: inline-block;
-  padding-right: 1rem;
-  border-right: solid;
-}
-.job-subheading {
-  display: inline-block;
+.job-header {
+  display: flex;
+  flex-direction: column;
 }
 
 #contact a:hover {
@@ -125,6 +123,20 @@ li + li {
   }
   main > * + * {
     margin-top: 5rem;
+  }
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .job-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .job-heading {
+    padding-right: 1rem;
+    border-right: solid;
   }
 }
 @media screen and (min-width: 992px) {
